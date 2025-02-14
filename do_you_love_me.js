@@ -25,8 +25,6 @@ yesBtn.addEventListener("click", () => {
     if (resultContainer && gifResult) {
       resultContainer.style.display = "inherit";
       gifResult.play();
-    } else {
-      console.error("Result container or GIF result is not found.");
     }
   }, 3000);
 });
