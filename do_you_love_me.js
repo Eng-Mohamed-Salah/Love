@@ -22,7 +22,11 @@ yesBtn.addEventListener("click", () => {
 
   const timeoutId = setTimeout(() => {
     heartLoader.style.display = "none";
-    resultContainer.style.display = "inherit";
-    gifResult.play();
+    if (resultContainer && gifResult) {
+      resultContainer.style.display = "inherit";
+      gifResult.play();
+    } else {
+      console.error("Result container or GIF result is not found.");
+    }
   }, 3000);
 });
